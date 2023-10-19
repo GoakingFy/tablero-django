@@ -1,9 +1,5 @@
 from django import forms
 
-from .models import Post
-
-class PostForm(forms.ModelForm):
-
-    class Meta:
-        model = Post
-        fields = ('rows', 'columns',)
+class tableForm(forms.Form):
+    fila = forms.CharField(label='Fila:',max_length=15)
+    columna = forms.CharField(label='Columna',max_length=12)

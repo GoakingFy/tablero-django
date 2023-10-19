@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from .forms import PostForm
+from .forms import tableForm
+
 
 # Create your views here.
 
 def indexpage(request):
-    return render(request, 'buscaminas/index.html', {})
+   table_form = tableForm()
+   return render(request, 'buscaminas/index.html', {'table_form': table_form})
 
-def table_new(request):
-    form = PostForm()
-    return render(request, 'buscaminas/index.html', {'form': form})
+
+
+   
